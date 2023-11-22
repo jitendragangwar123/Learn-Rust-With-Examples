@@ -22,7 +22,6 @@ fn main() {
 
 //Example:3
 use std::io;
-
 fn main() {
     let mut input_a = String::new();
     let mut input_b = String::new();
@@ -39,3 +38,18 @@ fn main() {
     println!("Sum is: {}",sum);
     println!("Difference is: {}",diff);
 }
+
+//Example:4
+use std::io;
+fn main() {
+    let mut a_str = String::new();
+    io::stdin().read_line(&mut a_str).unwrap();
+    let a: i32 = a_str.trim().parse().unwrap();
+    
+    let mut b_str = String::new();
+    io::stdin().read_line(&mut b_str).unwrap();
+    let b: i32 = b_str.trim().parse().unwrap();
+
+    println!("{}{}{}", a , b , a + b);
+}
+
