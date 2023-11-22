@@ -13,7 +13,7 @@ This repository comprises concepts and examples related to the Rust programming 
 ```shell
 $ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
   Rust is installed now. Great!
-$ rustc –version
+$ rustc –-version
 ```
 #### Updating and Uninstalling
 ```shell
