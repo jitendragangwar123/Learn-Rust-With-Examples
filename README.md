@@ -7,10 +7,10 @@ This repository comprises concepts and examples related to the Rust programming 
 - [The-Rust-Programming-Language](https://doc.rust-lang.org/book/title-page.html)
 - [Rust-Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021)
 
-### Table Of Contents
+## Table Of Contents
 - [Introduction](https://github.com/jitendragangwar123/Learn-Rust-With-Examples/tree/main/Introduction)
-
-
+- [Primitives]()
+- [Custom Types]()
 
 
 
