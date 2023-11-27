@@ -58,3 +58,13 @@ fn main() {
         println!("{}", color);
     }
 }
+
+//Output
+/*
+Dublin: 53.348°N 6.260°W
+Oslo: 59.950°N 10.750°E
+Vancouver: 49.250°N 123.100°W
+RGB (128, 255, 90) 0x80FF5A
+RGB (0, 3, 254) 0x0003FE
+RGB (0, 0, 0) 0x000000
+*/
