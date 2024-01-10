@@ -52,6 +52,13 @@ $ cargo run // to run the executable file
 $ cargo check // to check the syntax and type-checking
 ```
 ```shell
-Cargo.toml:- store metadata about your project
+Cargo.toml:- Store metadata about your project
+
+    [package]
+    name = "my_project"
+    version = "0.1.0"
+    authors = ["Your Name <your@email.com>"]
+    [dependencies]
+    rand = "0.8.4"
 ```
 
