@@ -16,7 +16,7 @@ This repository comprises concepts and examples related to the Rust programming 
 
 
   
-#### For MacOS:
+### For MacOS:
 ```shell
 // Installation
 $ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
@@ -34,7 +34,7 @@ $ ./hello_world // to run the file
   Hello, world!  // output
 ```
 
-#### For Linux:
+### For Linux:
 ```shell
 // Installation
 $ sudo apt-get install rustc cargo
@@ -45,7 +45,7 @@ $ cargo build //to build the project means compiles the project, and generates a
 $ cargo run // to run the executable file
 $ cargo check // to check the syntax and type-checking
 
-`Cargo.toml`: Store metadata about your project
+Cargo.toml: Store metadata about your project
     [package]
     name = "my_project"
     version = "0.1.0"
