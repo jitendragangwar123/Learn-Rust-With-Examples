@@ -1,3 +1,4 @@
+// initialize array
 fn main() {
     let num: [i32; 5] = [1, 2, 3, 4, 5];
     println!("Done");
