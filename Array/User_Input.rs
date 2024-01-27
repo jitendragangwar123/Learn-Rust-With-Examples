@@ -1,3 +1,4 @@
+// taking user input as a string
 use std::io::{self, Write};
 fn main() {
     let mut s = String::new();
