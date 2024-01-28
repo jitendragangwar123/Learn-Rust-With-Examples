@@ -1,3 +1,4 @@
+//Example:1
 // taking user input as a string
 use std::io::{self, Write};
 fn main() {
@@ -13,7 +14,7 @@ fn main() {
     println!("Your name is: {}", s.trim());
 }
 
-
+//Example:2
 // taking user input as a number
 use std::io;
 fn main() {
@@ -24,6 +25,7 @@ fn main() {
     println!("Your number is: {}", a); 
 }
 
+//Example:3
 // trim the string input
 use std::io;
 fn main() {
