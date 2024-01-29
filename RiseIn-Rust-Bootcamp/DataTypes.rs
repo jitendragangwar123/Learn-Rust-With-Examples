@@ -10,10 +10,92 @@ Tuples: (T1, T2, ..., Tn), which represent a fixed-size sequence of elements of 
 Unit type: (), which represents an empty tuple and is used when no value is needed
 */
 
-`Booleans:` 
-
-  fn main(){
+//Booleans:
+fn main(){
     let is_rust_fun = true;
     let is_rust_hard = false;
     println!("{}\n{}",is_rust_fun,is_rust_hard);
-  }
+}
+
+//Integers:
+fn main(){
+    let x: i32 = 42;
+    let y: u32 = 45;
+    let min_i32 = i32::MIN;
+    let max_i32 = i32::MAX;
+    let min_u32 = u32::MIN;
+    let max_u32 = u32::MAX;
+    println!("{}\n{}",x,y);
+    println!("The minimum value of i32 is {} and the maximum value is {}.", 
+    min_i32, max_i32);
+    println!("The minimum value of u32 is {} and the maximum value is {}.", 
+    min_u32, max_u32);
+}
+
+//Floating-point numbers:
+fn main(){
+    let pi: f64 = 3.14159;
+    let x: f32 = 3.12;
+    println!("{}\n{}",pi,x);
+}
+
+//Characters:
+fn main(){
+    let letter_a: char = 'a';
+    println!("{}",letter_a);
+}
+
+
+/*
+Strings:
+1. &str is a reference to a string slice, while String is a growable string type.
+2. String slices are immutable by default, while String variables are mutable by default.
+3. String is a growable string type that is stored in the heap, while a string slice (&str) is a reference 
+   to a fixed-size sequence of characters that can be stored either in the heap or in the program's binary.
+*/ 
+
+fn main(){
+    let message: &str = "Hello, world!";
+    let mut name = String::from("Alice");
+    //let name = String::from("Bob");
+    println!("{}\n{}",message,name);
+}
+
+//Arrays:
+fn main(){
+    let numbers: [i32; 3] = [1, 2, 3];
+    println!("{:?}",numbers);
+    let second_number = numbers[1];
+    println!("The second number in the array is {}.", second_number);
+}
+
+//Slices: A contiguous sequence of elements of the same type.
+fn main(){
+    let numbers: [i32; 3] = [1, 2, 3];
+    let slice = &numbers[1..3];
+    println!("Slice of the numbers {:?}", slice);
+    let first_element = slice[0];
+    println!("The first element of the slice is {}.", first_element);
+}
+
+/*
+output:
+Slice of the numbers [2, 3]
+The first element of the slice is 2.
+*/
+
+//Tuples:
+fn main(){
+    let person = ("Jacob", 30);
+    let name = person.0;
+    let age = person.1;
+    println!("The person's name is {} and his age is {}.", name, age);
+    let persons = (("Jeetu", "Jay"), 50);
+    println!("The person's name is {} and {} and their age is {}.", persons.0.0, persons.0.1, persons.1);
+}
+
+//Unit type:
+fn main(){
+    let result = ();
+    println!("The result is {:?}.", result);
+}
