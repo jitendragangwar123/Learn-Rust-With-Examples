@@ -12,6 +12,7 @@ This repository comprises concepts and examples related to the Rust programming 
 - [Introduction](https://github.com/jitendragangwar123/Learn-Rust-With-Examples/tree/main/Introduction)
 - [Primitives]()
 - [Custom Types]()
+- [RiseIn-Rust-Bootcamp](https://github.com/jitendragangwar123/Learn-Rust-With-Examples/tree/main/RiseIn-Rust-Bootcamp)
 
 
 
