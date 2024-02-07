@@ -7,3 +7,12 @@ struct Book {
     author: String,
     publication_year: u32,
 }
+
+/*
+Defining Structs:
+*/
+
+struct Point {
+    x: f32,
+    y: f32,
+}
