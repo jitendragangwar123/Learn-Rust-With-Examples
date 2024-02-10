@@ -59,6 +59,22 @@ fn main() {
     println!("Updated Age: {}", alice.age);
 }
 
+/*
+Unit Structs:
+*/
+#[derive(Debug)]
+struct Empty;
+impl Empty {
+    fn greet(&self) {
+        println!("Hello, I am an empty struct!");
+    }
+}
+ fn main(){
+    let empty_instance = Empty;
+    let msg=empty_instance.greet();
+    println!("{:?}", msg);
+ }
+
 
 /*
 Implementing Methods for Structs:
