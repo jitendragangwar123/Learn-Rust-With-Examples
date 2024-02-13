@@ -1,5 +1,5 @@
 fn main(){
-    // variable initialization
+    // variable declaration 
     let message = "Hello, world!";
     let x: i32 = 42;
     let y: i32= 8;
@@ -7,7 +7,7 @@ fn main(){
     let is_rust_fun: bool = true;
     let letter_a: char = 'a';
     
-    // function initialization
+    // function declaration 
     fn add(x: i32, y: i32) -> i32 {
         x + y
     }
@@ -15,7 +15,7 @@ fn main(){
     println!("{}",message);
     println!("{}",add(23,2));
     
-    // if-else
+    // if-else statement 
     if x >= 0 {
 	    println!("x is non-negative");
     } else {
