@@ -60,6 +60,41 @@ fn main() {
 }
 
 /*
+Functions and Structs: Functions can take structs as parameters, and they can also return structs.
+*/
+
+#[derive(Debug)]
+struct Point {
+    x: f32,
+    y: f32,
+}
+
+//calculate the distance 
+fn distance(p1:Point, p2:Point) -> f64{
+    let x_diff=p1.x - p2.x;
+    let y_diff=p1.y - p2.y;
+    (x_diff*x_diff + y_diff*y_diff).sqrt().into()
+}
+
+//calculate the midpoint
+fn midpoint(p1:Point, p2:Point) -> Point{
+    let x_mid=(p1.x+p2.x)/2.0;
+    let y_mid=(p1.y+p2.y)/2.0;
+    Point{x:x_mid,y:y_mid}
+}
+
+fn main() {
+    let point1=Point{x:4.0, y:3.0};
+    let point2=Point{x:3.0, y:2.0};
+    
+    //let dist=distance(point1,point2);
+    let mid=midpoint(point1,point2);
+    //println!("The distance between x1,y1,x2,y2 is {}", dist);
+    println!("The mid point of poin1 and point2 is {} and {}",mid.x,mid.y);
+}
+
+
+/*
 Unit Structs:
 */
 #[derive(Debug)]
