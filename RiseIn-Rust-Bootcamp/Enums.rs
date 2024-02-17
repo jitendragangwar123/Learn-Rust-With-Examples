@@ -13,8 +13,9 @@ let current_weather = Weather::Sunny;
 /*
 Enums with Associated Data:
 */
+
 /*
-Example:1
+Example:
 */
 enum Message {
     Quit,
@@ -46,7 +47,7 @@ fn main(){
 }
 
 /*
-Example:2
+Example:
 */
 enum Message {
     Quit,
@@ -78,7 +79,7 @@ fn main() {
 }
 
 /*
-‘if let’ Syntax:
+‘if let’:
 */
 
 enum Animal {
