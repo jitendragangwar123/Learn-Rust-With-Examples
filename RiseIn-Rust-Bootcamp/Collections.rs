@@ -59,3 +59,83 @@ fn main(){
     let slice = &numbers[0..4];
     println!("Number: {:?}",slice);
 }
+
+/*
+Strings:Strings are a collection of characters, and in Rust, they are implemented as a wrapper over a Vec<u8> to store UTF-8 encoded text.
+        There are two main types of strings:
+        1. String: Which is a growable, mutable, and heap-allocated data structure.
+        2. &str: Which is an immutable, borrowed reference to a string slice.
+*/
+
+/*
+Appending to a String:
+            - push_str : method for adding a string slice.
+            - push : method for adding a single character.
+*/
+fn main(){
+    let mut hello = String::from("Hello, ");
+    hello.push_str("world!");
+    hello.push('!');
+    println!("{}", hello);
+}
+
+/*
+String Slicing and Indexing:
+            - Strings are encoded in UTF-8.
+            - Indexing them by bytes may not always correspond to a valid Unicode scalar value.
+            - you can use slicing to access parts of a string.
+*/
+fn main(){
+    let example = String::from("hello");
+    let slice = &example[0..3];
+    println!("{}", slice); // "hel"
+}
+
+/*
+UTF-8 Encoding and Handling Unicode Scalar Values:
+    - Strings in Rust are stored as a sequence of bytes representing UTF-8 encoded text.
+    - This means that some characters, such as those from non-Latin scripts or special symbols, may occupy more than one byte.
+    - You can use the chars method to iterate over Unicode scalar values.
+*/
+fn main(){
+    let text = "こんにちは";
+    for c in text.chars() {
+        println!("{}", c);
+    }
+}
+
+/*
+Iterating Through a String:
+    - You can use the chars method to iterate through the characters of a string.
+    - The bytes method to iterate through the individual bytes.
+*/
+fn main(){
+    let example = String::from("hello");
+
+    // Iterate over characters
+    for c in example.chars() {
+        println!("{}", c);
+    }
+    
+    // Iterate over bytes
+    for b in example.bytes() {
+        println!("{}", b);
+    }
+}
+/*
+Output:
+h
+e
+l
+l
+o
+h
+q
+104 ---> ASCII Value
+101
+108
+108
+111
+104
+113
+*/
