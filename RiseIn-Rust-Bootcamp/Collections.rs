@@ -1,8 +1,22 @@
 /*
 Collections: 
-    - In Rust, collections are powerful and versatile tools that enable you to store multiple data elements in a single structure.
-    - 
+        - In Rust, collections are powerful and versatile tools that enable you to store multiple data elements in a single structure.
+Vectors:
+        1.Vectors store elements of the same type in a contiguous memory space, which makes them ideal for handling ordered lists of elements.
+        2.Vectors automatically resize themselves when needed, making them a dynamic alternative to arrays.
+        3.When to use: You should choose vectors when you need a dynamic, ordered collection of elements where all elements have the same type.
+
+Strings:
+        1.Strings are used for storing and manipulating text data. They handle UTF-8 encoded text, which allows the representation of a wide range of characters.
+        2.The String type is mutable and can grow or shrink as needed.
+        3.When to use: You should use strings when you need to store or manipulate text data, while ensuring proper handling of Unicode characters.
+
+Hash Maps:
+        1.Hash maps store key-value pairs, allowing you to associate a value with a unique key.
+        2.They provide quick lookup, insertion, and deletion of elements based on the key.
+        3.When to use: Choose hash maps when you need to store data in a collection with unique keys and fast retrieval times, or when you want to quickly find a value based on a specific key.
 */
+
 /*
 Vectors: 
     - Vectors are resizable arrays that store elements of the same data type.
