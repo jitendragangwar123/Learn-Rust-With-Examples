@@ -139,3 +139,64 @@ q
 104
 113
 */
+
+/*
+Hash Maps:
+    - Which allow you to store data in key-value pairs.
+    - A hash map is a collection that associates a key with a value.
+    - To create a hash map, you can use the HashMap type from the std::collections module.
+*/
+
+/*
+Creating a Hash Map:
+*/
+use std::collections::HashMap;
+fn main() {
+    let mut scores = HashMap::new();
+    scores.insert(String::from("Alice"), 10);
+    scores.insert(String::from("Bob"), 20);
+    println!("Alice's Score: {}",scores["Alice"]);
+    println!("Score List: {:?}",scores);
+}
+
+/*
+Accessing and Updating Hash Map Elements:
+*/
+use std::collections::HashMap;
+fn main() {
+    let mut scores = HashMap::new();
+    scores.insert(String::from("Alice"), 10);
+    scores.insert(String::from("Bob"), 20);
+    //Access the hashmap elemets
+    let alice_score = scores.get(&String::from("Alice"));
+    println!("Alice's score: {:?}", alice_score);
+    // Update the hashmap elements
+    scores.insert(String::from("Alice"),30);
+    println!("Alice's updated score: {:?}",scores);
+}
+
+/*
+Removing Elements from a Hash Map:
+*/
+use std::collections::HashMap;
+fn main() {
+    let mut scores = HashMap::new();
+    scores.insert(String::from("Alice"), 10);
+    scores.insert(String::from("Bob"), 20);
+    // remove hashmap elements
+    scores.remove(&String::from("Alice"));
+    println!("Updated score: {:?}",scores);
+}
+
+/*
+Iterating Through a Hash Map:
+*/
+use std::collections::HashMap;
+fn main() {
+    let mut scores = HashMap::new();
+    scores.insert(String::from("Alice"), 10);
+    scores.insert(String::from("Bob"), 20);
+    for (key, value) in &scores {
+        println!("{}: {}", key, value);
+    }
+}
