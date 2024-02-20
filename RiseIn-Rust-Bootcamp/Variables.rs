@@ -19,3 +19,39 @@ let y = 3.14; // Rust infers the type as f64
 */
 let x = 42;
 let x = x + 1;
+
+//you aren’t allowed to use the mut keyword with constants, Constants aren’t immutable by default.
+fn main() { 
+    const N: i32 = 1; 
+    println!("num: {}", N); 
+}
+
+
+// multiple variables in a single line 
+fn main() { 
+  let ( first, middle, last ) = ("geeks", "for","geeks"); 
+  println!("{} {} {} is amazing", first, middle, last ); 
+}
+
+/*
+Shadowing:
+        Shadowing is an instance where we can make a variable mutable temporarily.
+        Shadowing also allows changing the data type of variable. 
+*/
+fn main() { 
+    // original value of gfg  
+    // variable is 100 
+    let gfg = 100; 
+      
+    // gfg variable has value 
+    // 100-50 = 50 here 
+    // gfg variable got shadowed 
+    let gfg = gfg -50; 
+      
+    // Again gfg variable has value 
+    // 50*5 = 250 
+    // gfg variable got shadowed again 
+    let gfg = gfg * 5; 
+  
+    println!("The value of gfg is: {}", gfg); 
+}
