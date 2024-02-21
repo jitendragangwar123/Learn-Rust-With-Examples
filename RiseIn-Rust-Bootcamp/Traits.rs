@@ -18,3 +18,37 @@ fn main(){
     let y = identity("hello"); // works with strings
     println!("{} {}",x,y);
 }
+
+/*
+Defining Traits:
+    - To define a trait, you use the trait keyword followed by the name of the trait and a block containing the method signatures.
+*/
+trait Speak {
+    fn speak(&self);
+}
+
+/*
+Implementing Traits:
+    - To implement a trait for a specific type, you use the impl keyword followed by the trait name, the for keyword, 
+      and the name of the type you want to implement the trait for.
+    - You provide the method implementations in a block.
+*/
+
+trait Speak {
+    fn speak(&self);
+}
+
+struct Dog {
+    name: String,
+}
+
+impl Speak for Dog {
+    fn speak(&self) {
+        println!("{} says: Woof!", self.name);
+    }
+}
+
+fn main(){
+    let d = Dog{name:String::from("Tom")}; 
+    d.speak();
+}
