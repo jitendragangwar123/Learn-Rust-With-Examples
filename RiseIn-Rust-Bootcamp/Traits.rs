@@ -52,3 +52,41 @@ fn main(){
     let d = Dog{name:String::from("Tom")}; 
     d.speak();
 }
+
+/*
+Implementing Traits for Custom Types (Structs, Enums):
+*/
+trait Display {
+    fn display(&self) -> String;
+}
+
+struct Circle {
+    radius: f64,
+}
+
+struct Rectangle {
+    width: f64,
+    height: f64,
+}
+
+impl Display for Circle {
+    fn display(&self) -> String {
+        format!("Circle with radius: {}", self.radius)
+    }
+}
+
+impl Display for Rectangle {
+    fn display(&self) -> String {
+        format!("Rectangle with width: {} and height: {}", self.width, self.height)
+    }
+}
+
+fn main(){
+    let c = Circle{radius:20.0}; 
+    let r = Rectangle{width:4.0,height:5.0};
+    println!("{}\n{}",c.display(),r.display());
+}
+
+/*
+Implementing Traits for Existing Types:
+*/
