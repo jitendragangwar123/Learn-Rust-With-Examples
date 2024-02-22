@@ -39,11 +39,11 @@ $ ./hello_world // to run the file
 ```shell
 // Installation
 $ sudo apt-get install rustc cargo
-
-// Create New Project
-$ cargo new my_project
+$ cargo --version // to check the cargo version
+$ cargo new my_project or cargo init // Create New Project
 $ cargo build //to build the project means compiles the project, and generates an executable file in the target/debug directory
-$ cargo run // to run the executable file
+$ cargo build --release // to create a production ready executable
+$ cargo run or ./target/debug/hello_world.exe // to run the executable file
 $ cargo check // to check the syntax and type-checking
 
 Cargo.toml: Store metadata about your project
