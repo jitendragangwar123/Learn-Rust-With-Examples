@@ -19,9 +19,12 @@
 
 //Booleans:
 fn main(){
-    let is_rust_fun = true;
-    let is_rust_hard = false;
-    println!("{}\n{}",is_rust_fun,is_rust_hard);
+    let is_rust_fun = true; // implicit declaration
+    let is_rust_hard : bool = false; // explicit declaration
+    println!("{}\n{}",is_rust_fun, is_rust_hard);
+
+    let b:bool; // you have to assign the value
+    println!("{}",b); //error
 }
 
 //Integers:
@@ -82,7 +85,7 @@ fn main(){
 
 //Floating-point numbers:
 fn main(){
-    let pi: f64 = 3.14159;
+    let pi = 3.14159; // f64 by default
     let x: f32 = 3.12;
     println!("{}\n{}",pi,x);
 }
@@ -91,6 +94,12 @@ fn main(){
 fn main(){
     let letter_a: char = 'a';
     println!("{}",letter_a);
+}
+
+fn main(){
+    for ch in "Hello".chars(){
+        println!("{}",ch);
+    }
 }
 
 
@@ -133,12 +142,17 @@ The first element of the slice is 2.
 */
 
 //Tuples:
+
 fn main(){
-    let person = ("Jacob", 30);
-    let name = person.0;
-    let age = person.1;
-    println!("The person's name is {} and his age is {}.", name, age);
-    let persons = (("Jeetu", "Jay"), 50);
+    let person:(&str,i32) = ("Jacob", 30);
+    // accessing by index
+    println!("Name: {} and Age: {}",person.0,person.1);
+    
+    //destructuring
+    let (name,age) = person;
+    println!("Name: {} and Age: {}",name,age);
+    
+    let persons:((&str,&str),i32) = (("Jeetu", "Jay"), 50);
     println!("The person's name is {} and {} and their age is {}.", persons.0.0, persons.0.1, persons.1);
 }
 
