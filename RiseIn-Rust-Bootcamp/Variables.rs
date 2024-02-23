@@ -55,3 +55,73 @@ fn main() {
   
     println!("The value of gfg is: {}", gfg); 
 }
+
+
+// variable declaration examples
+fn main(){
+    // initialize the variable
+    let x; 
+    x=7;
+    println!("{}",x); //7
+    
+    // mutable and immutable variable 
+    // let a = 5; // immuatable by default
+    // a=7;
+    // println!("{}",a) // not working 
+    
+    let mut a=5;
+    a=10;
+    println!("{}",a); //10
+    
+    //shadowing : You can declare a variable with the same name many times but in same scope
+    let b=5;
+    let b=15;
+    println!("{}",b);//15
+    
+    let c=20;
+    let c=c+1;
+    println!("{}",c); //21
+    
+    let d=10;
+    //inner scope 
+    {
+        let d=20; // value not changed
+    }
+    let d=d+12;
+    println!("{}",d); //22
+    
+    
+    let e=10;
+    //inner scope 
+    {
+        let e = e+20; // value not changed
+    }
+    let e=e+12;
+    println!("{}",e); //22
+    
+    let mut f=10;
+    {
+        f=20; // value changed
+    }
+    let f=f+1;
+    println!("{}",f);//21
+}
+
+
+// you can change the type of variable along with value[shadowing]
+fn main(){
+   let x=5;
+   let x="hello";
+   println!("{}",x); //hello
+}
+
+// you can change the value of the variable not type
+fn main(){
+   let mut x=5;
+   x="hello";
+   println!("{}",x);
+   
+   let x=5;
+   x="hello";
+   println!("{}",x);
+}
