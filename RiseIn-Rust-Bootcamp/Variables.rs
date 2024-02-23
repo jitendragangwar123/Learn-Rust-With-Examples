@@ -125,3 +125,17 @@ fn main(){
    x="hello";
    println!("{}",x);
 }
+
+//const keyword in rust
+// const variable initialize with Capital letter along with type
+fn main(){
+   const MAX_POINTS:i32=100_000;
+   println!("{}",MAX_POINTS);
+}
+
+// const variable initialize with the value
+fn main(){
+   const MAX_POINTS:i32;
+   MAX_POINTS=100_00;
+   println!("{}",MAX_POINTS); // not worked
+}
