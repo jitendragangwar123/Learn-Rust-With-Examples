@@ -45,6 +45,27 @@ fn main(){
    println!("big_number1:{}",big_number1);
 }
 
+// Numeral System
+   /*
+   Decimal
+   Hexadecimal(0x)
+   Octal (0o)
+   Binary (0b)
+   Byte (b) -->b'A'
+   */
+fn main(){
+   let decimal=98_000;
+   let hex=0xff;
+   let octal=0o77;
+   let binary=0b11111_000;
+   let byte=b'A';
+   println!("decimal:{}",decimal);
+   println!("hex:{}",hex);
+   println!("octal:{}",octal);
+   println!("binary:{}",binary);
+   println!("byte:{}",byte);
+}
+
 fn main(){
     let x: i32 = 42;
     let y: u32 = 45;
