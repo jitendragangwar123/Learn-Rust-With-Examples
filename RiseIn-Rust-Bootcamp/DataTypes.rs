@@ -25,6 +25,26 @@ fn main(){
 }
 
 //Integers:
+/*
+   Length        Signed       Unsigned
+   8-bit         i8            u8
+   16-bit        i16           u16
+   32-bit        i32           u32
+   64-bit        i64           u64
+   128-bit       i128          u128
+   arch          isize         usize
+   */
+fn main(){
+   let small_number:u8=123;
+   let big_number:u128=12787667667868;
+   let small_number1:i8=-128;
+   let big_number1:i128=-12787667667868;
+   println!("small_number:{}",small_number);
+   println!("big_number:{}",big_number);
+   println!("small_number1:{}",small_number1);
+   println!("big_number1:{}",big_number1);
+}
+
 fn main(){
     let x: i32 = 42;
     let y: u32 = 45;
