@@ -121,9 +121,14 @@ fn main(){
 //Arrays:
 fn main(){
     let numbers: [i32; 3] = [1, 2, 3];
-    println!("{:?}",numbers);
+    println!("Numbers: {:?}",numbers);
     let second_number = numbers[1];
-    println!("The second number in the array is {}.", second_number);
+    println!("The second number in the array is {}", second_number);
+    
+    // iterate the array elements
+    for num in numbers.iter(){
+        println!("Number: {}",num);
+    }
 }
 
 //Slices: A contiguous sequence of elements of the same type.
