@@ -7,8 +7,15 @@ enum Weather {
     Rainy,
     Snowy,
 }
-let current_weather = Weather::Sunny;
-
+fn main(){
+    let current_weather = Weather::Sunny;
+    match current_weather{
+        Weather::Sunny=>println!("Sunny"),
+        Weather::Cloudy=>println!("Cloudy"),
+        Weather::Rainy=>println!("Rainy"),
+        Weather::Snowy=>println!("Snowy"),
+    };
+}
 
 /*
 Enums with Associated Data:
