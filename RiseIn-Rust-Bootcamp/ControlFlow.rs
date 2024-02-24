@@ -1,4 +1,17 @@
-//Conditional Statements:
+//Control Flow in rust
+pub fn main(){
+    //if expression
+    //match
+    //loop expression
+    //while expression
+    //for expression
+    let number=4;
+    if number<5{
+        println!("True");
+    }else{
+        println!("False");
+    }
+}
 
 //if-else
 fn main(){
