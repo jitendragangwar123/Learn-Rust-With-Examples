@@ -24,6 +24,23 @@ pub fn main(){
     println!("Number: {}",number)
 }
 
+
+//example
+pub fn main(){
+    let num=60;
+    if num%2==0{
+        println!("{} is even",num);
+    }else{
+        println!("{} is odd",num);
+    }
+    
+    if num>20 {
+        println!("{} is greater than 20",num);
+    }else{
+        println!("{} is less than 20",num);
+    }
+}
+
 //if-else
 fn main(){
   let x = 5;
