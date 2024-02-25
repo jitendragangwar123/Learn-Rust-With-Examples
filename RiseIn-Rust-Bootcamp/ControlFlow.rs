@@ -13,6 +13,17 @@ pub fn main(){
     }
 }
 
+//example
+pub fn main(){
+    let condition=true;
+    let number=if condition{
+        5
+    }else{
+        8
+    };
+    println!("Number: {}",number)
+}
+
 //if-else
 fn main(){
   let x = 5;
