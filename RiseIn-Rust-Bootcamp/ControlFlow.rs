@@ -90,7 +90,8 @@ fn main(){
 }
 
 
-//loop:keyword
+//loop keyword
+//Example-1
 fn main(){
     let mut counter = 0;
     loop {
@@ -101,6 +102,18 @@ fn main(){
             break;
         }
     }
+}
+
+//Example-2
+fn main(){
+    let mut count=1;
+    let res=loop{
+        count+=1;
+        if count==10 {
+            break count*2;
+        } 
+    };
+    println!("The res is :{:?}",res); //20
 }
 
 //match keyword
