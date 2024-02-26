@@ -73,11 +73,22 @@ fn main (){
 }
 
 //while-loop
+//Example-1
 fn main(){
     let mut counter = 0;
     while counter < 5 {
         println!("Counter value is {}", counter);
         counter += 1;
+    }
+}
+//Example-2
+fn main(){
+    let mut count=10;
+
+    while count >0 {
+        println!("Hello world {}",count);
+        count-=1;
+        std::thread::sleep(std::time::Duration::from_secs(2)); //Sleep form  2 seconds.
     }
 }
 
@@ -88,7 +99,6 @@ fn main(){
         println!("Number is {}", number);
     }
 }
-
 
 //loop keyword
 //Example-1
