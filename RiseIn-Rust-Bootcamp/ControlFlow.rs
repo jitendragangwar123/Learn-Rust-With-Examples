@@ -93,10 +93,29 @@ fn main(){
 }
 
 //for-loop
+//Example-1
 fn main(){
     let numbers = vec![1, 2, 3, 4, 5];
     for number in numbers {
         println!("Number is {}", number);
+    }
+}
+
+//Example-2
+fn main(){
+    let a=[1,2,1,2,1];
+    for i in a.iter(){
+        println!("Element : {}",i);
+    } 
+
+    let s="HelloWorld";
+    for c in s.chars(){
+        println!("Character: {}",c);
+    }
+    
+    // print the numbers in range 1-3
+    for number in 1..4{
+        println!("Number : {}",number);
     }
 }
 
