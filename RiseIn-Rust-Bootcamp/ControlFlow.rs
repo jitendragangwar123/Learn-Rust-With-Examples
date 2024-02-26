@@ -13,7 +13,7 @@ pub fn main(){
     }
 }
 
-//example
+//if-else example-1
 pub fn main(){
     let condition=true;
     let number=if condition{
@@ -25,7 +25,7 @@ pub fn main(){
 }
 
 
-//example
+//example-2
 pub fn main(){
     let num=60;
     if num%2==0{
@@ -41,7 +41,7 @@ pub fn main(){
     }
 }
 
-//if-else
+//example-3
 fn main(){
   let x = 5;
     if x > 10 {
@@ -50,6 +50,25 @@ fn main(){
         println!("x is less than 10");
     } else {
         println!("x is equal to 10");
+    }
+}
+
+//example-4
+fn main (){
+    let a=20;
+    let b=15;
+    let c=2;
+    //&& operator
+    if a>b && b>c {
+        println!("a is greater than b and b is greater than c!");
+    }else{
+        println!("condition not matched!");
+    }
+    // || operator
+    if a>b || b>c {
+        println!("At least one conditon matched!");
+    }else{
+        println!("condition not matched!");
     }
 }
 
