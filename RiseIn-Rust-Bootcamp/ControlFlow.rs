@@ -190,3 +190,21 @@ fn main (){
     let value=value_in_cents(coin);
     println!("Value of coin: {}",value);
 }
+
+//FIZZ BUZZ example
+fn main(){
+    // range from 1-100
+    for number in 1..=100{
+        if number%3==0 {
+            println!("FIZZ");
+        }
+        else if  number %5 == 0 {
+            println!("BUZZ");
+        }
+        else if number%5==0  && number%3==0 {
+            println!("FIZZ BUZZ");
+        }else{
+            println!("{}",number);
+        }
+    }
+}
