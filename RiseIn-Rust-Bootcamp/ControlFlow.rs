@@ -191,6 +191,15 @@ fn main (){
     println!("Value of coin: {}",value);
 }
 
+//Example-4
+fn main() {
+	let gfg = String::from("cp"); // store into heap
+	match &*gfg {
+		"ds"|"cp"|"fg" => println!("topics included in gfg"),
+		_ => println!("Not in GFG topics")
+	}
+}
+
 //FIZZ BUZZ example
 fn main(){
     // range from 1-100
