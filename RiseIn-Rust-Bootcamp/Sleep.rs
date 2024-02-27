@@ -1,3 +1,4 @@
+//Sleep method in rust
 fn main() {
     println!("Hello World!");
     //wait for 3 seconds
