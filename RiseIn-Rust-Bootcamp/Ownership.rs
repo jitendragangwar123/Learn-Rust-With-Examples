@@ -22,11 +22,28 @@ Ownership:
     This ensures that there is always exactly one owner for each value, which helps to prevent common memory-related bugs such as double-freeing or use-after-free errors. 
 */
 
-fn print_string(s: String) { 
-    println!("{}", s); 
+//Example: Ownerships in Rust (Move, Clone, Copy)
+fn main(){    
+    // Copy (Stack-only data)
+    // works for Integers,Boolean,Char,Floating-point numbers,Tuples 
+    let s1="Hello"; 
+    let s2=s1;
+    println!("{}",s1);
+    println!("{}",s2); 
+
+    // Move : data stored in heap
+    let s3=String::from("Hello"); 
+    // Move : the s3 value moved into s4
+     let s4=s3;
+    //println!("{}",s3); // s3 invalidate 
+    println!("{}",s4);
+
+    // Clone : data stored in heap
+    let s5=String::from("Hello"); // store in heap
+    let s6=s5.clone(); 
+    println!("{}",s5);
+    println!("{}",s6);    
 } 
-let my_string = String::from("hello, world!"); 
-print_string(my_string); 
 
 /*
 Stack And Heap:
