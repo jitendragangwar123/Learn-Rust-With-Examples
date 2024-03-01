@@ -9,17 +9,15 @@ There are two types of references in Rust: mutable references and immutable refe
 Immutable References:
     - Immutable references are references that allow you to read a value, but not modify it.
     - Create an immutable reference by using the & operator followed by the variable name.
-    - Immutable references is that you can have multiple immutable references to the same value at the same time.
+    - Immutable references that you can have multiple immutable references to the same value at the same time.
     - You can't have a mutable reference and an immutable reference to the same value at the same time.
 */
 
 let my_string = String::from("hello, world!");
 let my_ref = &my_string;
-
 fn print_string(s: &String) {
     println!("{}", s);
 }
-
 let my_string = String::from("hello, world!");
 print_string(&my_string);
 
