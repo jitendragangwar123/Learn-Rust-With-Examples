@@ -4,6 +4,7 @@ Traits:
   - Traits in Rust are similar to interfaces in languages like Java or C#.
 */
 
+
 /*
 Basics of Generics:
   - Generics are a powerful feature that allows you to write flexible and reusable code by defining functions, 
@@ -25,6 +26,7 @@ Defining Traits:
 trait Speak {
     fn speak(&self);
 }
+
 
 /*
 Implementing Traits:
