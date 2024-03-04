@@ -67,3 +67,24 @@ let x = 5; // stored on the stack
 let y = String::from("hello"); // stored on the heap 
 let z = y; // ownership of y is moved to z 
 println!("x = {}, z = {}", x, z); 
+
+//Example:
+//function to give ownership of a string to another function
+fn give_ownership()->String{
+    let some_string=String::from("Hello s1");
+    some_string
+}
+
+//function to take and return the ownership of a string
+fn take_and_give_ownership(example_string:String)->String{
+    example_string
+}
+
+pub fn main(){
+    let s1=give_ownership();
+    println!("s1: {}",s1);
+
+    let s2=String::from("hello from main");
+    let s3=take_and_give_ownership(s2);
+    println!("s3: {}",s3);
+}
