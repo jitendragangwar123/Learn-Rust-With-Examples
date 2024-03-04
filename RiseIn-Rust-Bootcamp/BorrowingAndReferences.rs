@@ -12,28 +12,53 @@ Immutable References:
     - Immutable references that you can have multiple immutable references to the same value at the same time.
     - You can't have a mutable reference and an immutable reference to the same value at the same time.
 */
+//Example:1
+fn main(){
+    let i=5;
+    call_int(i);
+    println!("The value of i is :{}",i);
+    
+    let s=String::from("Hello");
+    call_string(s);
+    //println!("The value of s is :{},s); //error due to ownership
+}
+//call int function
+fn call_int(i:i32){
+   println!("call_int i:{}",i);
+}
+//call string function
+fn call_string(s:String){
+   println!("call_string s:{}",s);
+}
 
+//Example:2
+/*
 let my_string = String::from("hello, world!");
 let my_ref = &my_string;
+*/
 fn print_string(s: &String) {
     println!("{}", s);
 }
-let my_string = String::from("hello, world!");
-print_string(&my_string);
+fn main(){
+    let my_string = String::from("hello, world!");
+    print_string(&my_string); //hello, world!
+}
 
 /*
 Mutable References:
     - A mutable reference is a reference to a variable that allows you to modify the value.
 */
 
+//Example:1
+fn change_string(s: &mut String) {
+    s.push_str(" world");
+}
 fn main() {
     let mut my_string = String::from("hello");
     change_string(&mut my_string);
     println!("{}", my_string); // prints "hello world"
 }
-fn change_string(s: &mut String) {
-    s.push_str(" world");
-}
+
 
 /*
 - You can only have one mutable reference to a variable at a time.
