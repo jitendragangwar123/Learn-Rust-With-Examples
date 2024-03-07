@@ -3,7 +3,7 @@ Borrowing And References:
     - Borrowing allows you to temporarily access a value without taking ownership of it.
     - When you borrow a value, you create a reference to it, which allows you to read or modify the value without becoming the owner.
 */
-
+// Example:1
 // to calculate the length of the string
 fn main(){
     let s1 = String::from("Hello");
@@ -16,6 +16,19 @@ fn calculate_length(s:String)->(String,usize){
     (s,length)
 }
 
+// Example:2
+fn main(){
+    let s1 = String::from("Hello");
+    //passing reference of the string
+    let length= calculate_length(&s1);
+    println!("The length of {} is {}.",s1,length);
+}
+
+//calculate the length of the string
+fn calculate_length(s:&String)->usize{
+    let length=s.len();
+    length
+}
 /*
 There are two types of references in Rust: mutable references and immutable references.
 Immutable References:
