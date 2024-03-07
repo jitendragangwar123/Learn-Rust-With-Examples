@@ -29,6 +29,9 @@ fn calculate_length(s:&String)->usize{
     let length=s.len();
     length
 }
+
+
+
 /*
 There are two types of references in Rust: mutable references and immutable references.
 Immutable References:
@@ -37,6 +40,14 @@ Immutable References:
     - Immutable references that you can have multiple immutable references to the same value at the same time.
     - You can't have a mutable reference and an immutable reference to the same value at the same time.
 */
+//Example: Multiple immutable refernces 
+fn main() {
+    let my_string = String::from("Hello ");
+      let s1 = &my_string;
+      let s2 = &my_string;
+    println!("{}{}", s1,s2); // prints "Hello Hello"
+}
+
 //Example:1
 fn main(){
     let i=5;
@@ -72,6 +83,7 @@ fn main(){
 /*
 Mutable References:
     - A mutable reference is a reference to a variable that allows you to modify the value.
+    - You can only have one mutable reference to a variable at a time.
 */
 
 //Example:1
@@ -84,9 +96,20 @@ fn main() {
     println!("{}", my_string); // prints "hello world"
 }
 
+// Example:2 Only one mutable reference at a time
+fn main() {
+    let mut my_string = String::from("Hello");
+    {
+      let s1 = &mut my_string; // s1 discarded
+      s1.push_str(" World");
+    }
+    let s2 = &mut my_string;
+    s2.push_str("!");
+    println!("{}", s2); // prints "Hello World!"
+}
 
 /*
-- You can only have one mutable reference to a variable at a time.
+
 - This is to prevent data races and other types of undefined behavior that can occur when multiple threads try to modify the same variable at the same time.
 - If you try to create a second mutable reference to the same variable before the first one goes out of scope, you'll get a compile-time error.
 - References automatically expire at the end of their scope.
