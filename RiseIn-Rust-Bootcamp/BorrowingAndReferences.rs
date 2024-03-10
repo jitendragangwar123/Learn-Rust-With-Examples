@@ -125,6 +125,18 @@ fn main() {
     println!("{}", r3); // prints "hello world"
 }
 
+// change borrowed value
+fn main() {
+    let mut s=String::from("Hello");
+    changed_borrowed_value(&mut s);
+    println!("{}",s);
+}
+
+//fn to change the borrowed value
+fn changed_borrowed_value(s:&mut String){
+    s.push_str(" World!");
+}
+
 /*
 Dangling References:
     A dangling reference is a reference that points to a memory location that has been deallocated, causing unexpected behavior or a runtime error.
