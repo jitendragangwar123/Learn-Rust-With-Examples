@@ -155,3 +155,22 @@ pub fn main(){
 Dangling References:
     A dangling reference is a reference that points to a memory location that has been deallocated, causing unexpected behavior or a runtime error.
 */
+// dangling reference
+pub fn main(){
+    let ref_value=dangle();
+    println!("{}",ref_value);
+}
+fn dangle() -> &String {
+    let s = String::from("Hello");
+    &s
+} //drop s (means scope end)
+
+//Solution: return the string not reference
+pub fn main(){
+    let ref_value=dangle();
+    println!("{}",ref_value);
+}
+fn dangle() -> String {
+    let s = String::from("Hello");
+    s
+} 
