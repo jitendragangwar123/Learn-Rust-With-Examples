@@ -99,13 +99,15 @@ fn main() {
 // Example:2 Only one mutable reference at a time
 fn main() {
     let mut my_string = String::from("Hello");
+    //inner scope 
     {
       let s1 = &mut my_string; // s1 discarded
-      s1.push_str(" World");
+      s1.push_str(" World"); 
+      println!("{}",s1); // "Hello World"
     }
     let s2 = &mut my_string;
     s2.push_str("!");
-    println!("{}", s2); // prints "Hello World!"
+    println!("{}", s2); // "Hello World!"
 }
 
 /*
@@ -136,6 +138,18 @@ fn main() {
 fn changed_borrowed_value(s:&mut String){
     s.push_str(" World!");
 }
+
+
+// mutable and immutable reference
+pub fn main(){
+    let mut s=String::from("Hello");
+    let s1 = &s;//immutable
+    let s3=&s; //immutable
+    println!("{} {}",s1,s3);
+    let s2=&mut s; // mutable
+    println!("{}",s2);
+}
+
 
 /*
 Dangling References:
