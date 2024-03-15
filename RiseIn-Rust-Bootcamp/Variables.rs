@@ -1,6 +1,6 @@
 /*
--Variables are immutable by default.
--To make a variable mutable, you can use the mut keyword before the variable name.
+  -Variables are immutable by default.
+  -To make a variable mutable, you can use the mut keyword before the variable name.
 */
 
 let x = 42; // immutable variable
@@ -57,14 +57,14 @@ fn main() {
 }
 
 
-// variable declaration examples
+// Variable declaration examples
 fn main(){
     // initialize the variable
     let x; 
     x=7;
     println!("{}",x); //7
     
-    // mutable and immutable variable 
+    // Mutable and Immutable variable 
     // let a = 5; // immuatable by default
     // a=7;
     // println!("{}",a) // not working 
@@ -106,8 +106,6 @@ fn main(){
     let f=f+1;
     println!("{}",f);//21
 }
-
-
 // you can change the type of variable along with value[shadowing]
 fn main(){
    let x=5;
