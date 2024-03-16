@@ -51,3 +51,64 @@ fn main() {
     let slice=&s[..]; 
     println!("{}",slice); //Hello Jay
 }
+
+//Exercise : get the first word of the string(without using slice)
+fn main() {
+    let mut s = String::from("hello world");
+    let word = first_word(&s);
+    println!("String : {}", s); //hello world
+    println!("first word length: {}", word); //5
+
+    //clear the string
+    s.clear();
+    println!("String : {}", s); // " "
+    println!("first word length: {}", word); //5
+}
+
+fn first_word(s: &String) -> usize {
+    //convert string to bytes
+    let bytes = s.as_bytes();
+
+    //iterate through the bytes and return the index of the first space
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            //if the bytes is a space
+            return i;
+        }
+    }
+    //If no space is found return the length of the string
+    s.len()
+}
+
+//Exercise: get the first word of the string(using slice)
+pub fn main() {
+    //get the first word of the string(without using slice)
+    let s = String::from("hello world");
+    let word = first_word(&s);
+    println!("String: {}", s); //hello world
+    println!("first word: {}", word); //hello
+
+    //string literals are slice
+    let s = "hello world";
+    let word = first_word(s);
+    println!("String: {}", s); //hello world
+    println!("first word: {}", word); //hello
+}
+
+fn first_word(s: &str) -> &str {
+    //convert string to bytes
+    let bytes = s.as_bytes();
+
+    //iterate through the bytes and return the index of the first space
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            //if the bytes is a space then return the slice
+            return &s[0..i];
+        }
+    }
+    // if no space is found return the length of the string
+    &s[..]
+}
+
+// Slices are immutable,so you can use the slice here instead of string.
+// String literals are slices, so no need to use reference.
