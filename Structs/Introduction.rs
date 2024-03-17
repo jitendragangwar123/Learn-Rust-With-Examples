@@ -1,7 +1,7 @@
-// structs used to to create the custom data types
-// Similar to tuples but with named field
+// structs used to create the custom data types
+// Similar to tuples but with a named field
 // used to create more complex data types
-// stucts are immutable by default
+// structs are immutable by default
 
 //Example:1
 #[derive(Debug)]
@@ -11,8 +11,7 @@ struct User{
     is_active:bool,
     age:u8
 }
-
-pub fn main(){
+fn main(){
     let mut user1 = User{
         name:String::from("Jhone"),
         email:String::from("jhone@gmail.com"),
@@ -33,8 +32,7 @@ struct User{
     is_active:bool,
     age:u8
 }
-
-pub fn main(){
+fn main(){
     let user1=build_user(String::from("Jay"), String::from("jay@gmail.com"));
     println!("{:?}",user1);
 }
@@ -57,7 +55,7 @@ struct User{
     age:u8
 }
 
-pub fn main(){
+fn main(){
     let user1 = User{
         name:String::from("Jhone"),
         email:String::from("jhone@gmail.com"),
@@ -86,3 +84,12 @@ fn main(){
     println!("Black: {}, {}, {}",black.0,black.1,black.2);
     println!("Origin: {}, {}, {}",origin.0,origin.1,origin.2);
 }
+
+//uint-like struct
+#[derive(Debug)]
+struct User;
+fn main(){
+    let user=User;
+    println!("{:?}",user);
+}
+
