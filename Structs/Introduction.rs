@@ -13,7 +13,7 @@ struct User{
 }
 fn main(){
     let mut user1 = User{
-        name:String::from("Jhone"),
+        name:String::from("Jacob"),
         email:String::from("jhone@gmail.com"),
         is_active:true,
         age:68
