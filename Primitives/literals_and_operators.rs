@@ -6,14 +6,12 @@ octal-----> 0o
 binary-----> 0b
 */
 
-//Literals_And_Operators.rs
 fn main() {
     // Integer addition
     println!("1 + 5 = {}", 1u32 + 5);
 
     // Integer subtraction
     println!("2 - 6 = {}", 2i32 - 6);
-    // TODO ^ Try changing `1i32` to `1u32` to see why the type is important
 
     // Scientific notation
     println!("1e5 is {}, -2.5e-3 is {}", 1e5, -2.5e-3);
