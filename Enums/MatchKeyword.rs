@@ -17,7 +17,7 @@ fn move_player(direction:Direction){
     };
 }
 
-pub fn main(){
+fn main(){
     let player_direction=Direction::Up;
     move_player(player_direction);
 }
@@ -50,8 +50,20 @@ fn value_in_cents(coin:Coin)->u8{
     }
 }
 
-pub fn main(){
-    let coin_value=Coin::Quarter(Rarity::Common);
-    println!("{}",value_in_cents(coin_value));
-    
+//match with Option<T>
+fn main(){
+    fn plus_one(x:Option<i32>)->Option<i32>{
+        match x{
+            Some(i)=>Some(i+1),
+            None=>None,
+        }
+    }
+
+    let five=Some(5);
+    let six=plus_one(five);
+    println!("{:?}",six); //Some(6)
+
+    let none=plus_one(None);
+    println!("{:?}",none); //None
 }
+
