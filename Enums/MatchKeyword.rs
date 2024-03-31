@@ -51,6 +51,7 @@ fn value_in_cents(coin:Coin)->u8{
 }
 
 //match with Option<T>
+//Example:3
 fn main(){
     fn plus_one(x:Option<i32>)->Option<i32>{
         match x{
@@ -67,3 +68,16 @@ fn main(){
     println!("{:?}",none); //None
 }
 
+//Catch-all pattern, _
+//Example:4
+pub fn main(){
+    let x=9;
+
+    match x{
+        1=>println!("One"),
+        2=>println!("Two"),
+        3=>println!("Three"),
+        4=>println!("Four"),
+        _=>println!("Other"),
+    }
+}
