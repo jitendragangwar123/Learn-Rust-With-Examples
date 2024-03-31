@@ -28,3 +28,32 @@ fn main(){
    let loopback=IpAddressTypes::v6(String::from("::1"));
    println!("{:?}",loopback);
 }
+
+//Example:3
+//Implements a simple system based on Messages
+#[derive(Debug)]
+enum Message{
+    Quit,
+    Move {x:i32,y:i32},
+    Write(String),
+    ChangeColor(i32,i32,i32),
+}
+
+//methods of enums
+impl Message {
+    fn call(&self){
+        println!("{:?}",self);
+    }
+}
+
+fn main(){
+    let m=Message::Write(String::from("Hello Jay"));
+    let x=Message::Move{x:3,y:8};
+    let y=Message::ChangeColor(0, 0, 0);
+    let z=Message::Quit;
+
+    m.call();
+    x.call();
+    y.call();
+    z.call();
+}
