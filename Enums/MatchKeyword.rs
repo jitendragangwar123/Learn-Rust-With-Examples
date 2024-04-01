@@ -1,5 +1,5 @@
 // match keyword is used to compare values against a series of patterns.
-//Example:1
+// Example:1
 #[allow(dead_code)]
 enum Direction{
     Up,
@@ -22,7 +22,7 @@ fn main(){
     move_player(player_direction);
 }
 
-//Example:2
+// Example:2
 #[allow(dead_code)]
 enum Coin{
     Penny,
@@ -50,7 +50,6 @@ fn value_in_cents(coin:Coin)->u8{
     }
 }
 
-//match with Option<T>
 //Example:3
 fn main(){
     fn plus_one(x:Option<i32>)->Option<i32>{
