@@ -19,7 +19,7 @@ fn main() {
 
 // Displaying the count of elements
 fn main () {
-    let num: [i32; 6] = [1, 2, 3, 4, 5, 6];
+    let num: [i32; 5] = [1, 2, 3, 4, 5];
     println!("{}", num.len());
 }
 
