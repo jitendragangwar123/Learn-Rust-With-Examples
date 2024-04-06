@@ -69,14 +69,25 @@ fn main(){
 
 //Catch-all pattern, _
 //Example:4
-pub fn main(){
+fn main(){
     let x=9;
-
-    match x{
-        1=>println!("One"),
-        2=>println!("Two"),
-        3=>println!("Three"),
-        4=>println!("Four"),
-        _=>println!("Other"),
+    match x {
+        1 => println!("One"),
+        2 => println!("Two"),
+        3 => println!("Three"),
+        4 => println!("Four"),
+        _ => println!("Other"),
     }
+}
+
+//Example:5
+fn main() {
+    let gfg = String::from("cp"); 
+	// match with operator 
+	match &*gfg {
+		"ds" => println!("Data Structure"),
+		"cp" => println!("Competitive programming"),
+		"fg" => println!("FAANG"),
+		 _  => println!("not in gfg topics")
+	}
 }
