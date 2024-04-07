@@ -1,10 +1,8 @@
 // In rust there is no "Null" value,instead we have "Option" enum.
-/*
 enum Option<T>{
     Some(T),
     None,
 }
-*/
 
 /* 
 fn main(){
