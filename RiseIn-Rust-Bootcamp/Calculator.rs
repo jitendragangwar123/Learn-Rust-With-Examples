@@ -5,7 +5,7 @@ enum Operations{
     Multiply(f64,f64),
     Divide(f64,f64),
 }
-
+//calculator functionalities 
 fn calculate(op:Operations) -> f64{
     match op{
         Operations::Add(x,y) => x+y,
