@@ -1,9 +1,9 @@
 /*
 Methods:
-    Methods in Rust are similar to functions but they are defined within
+    - Methods in Rust are similar to functions but they are defined within
     the context of a Struct
     (or a enum or a trait object).
-    They are called by instances of the struct,and their first parameter
+    - They are called by instances of the struct,and their first parameter
     is always self,which represents the instance of the struct.
 */
 
