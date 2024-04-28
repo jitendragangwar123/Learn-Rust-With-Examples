@@ -1,3 +1,4 @@
+// Option method
 // fn main() {
 //     let config_max: Option<i32>=Some(100);
 //     match config_max{
