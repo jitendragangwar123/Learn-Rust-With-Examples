@@ -2,7 +2,7 @@
 pub mod network{
     //private function within the public module, used to establish a connection
     fn connect(){ 
-        println!("COnnection established!");
+        println!("Connection established!");
     }
 
     //public function that initiates a network connection
@@ -14,7 +14,7 @@ pub mod network{
 
 fn main(){
     network::initiate_connection();
-    //network::connect(); // we can't access the private function
+    //network::connect(); // we can't access the private function out of the scope
 }
 
 /* 
