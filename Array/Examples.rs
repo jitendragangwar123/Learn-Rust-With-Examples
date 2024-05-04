@@ -35,3 +35,13 @@ fn change_array(array:&mut [i32;5]){
 Changed array [0, 0, 0, 0, 0]
 Original array [0, 0, 0, 0, 0]
 */
+
+
+// vector in rust
+fn main() {
+
+	let v : Vec<i64> = Vec::new(); 
+
+	// printing the size of vector 
+	println!("{ }",v.len());
+}
