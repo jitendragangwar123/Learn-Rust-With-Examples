@@ -39,9 +39,14 @@ Original array [0, 0, 0, 0, 0]
 
 // vector in rust
 fn main() {
+   let v : Vec<i64> = Vec::new(); 
+  println!("{ }",v.len());
+}
 
-	let v : Vec<i64> = Vec::new(); 
-
-	// printing the size of vector 
-	println!("{ }",v.len());
+// indexing in vector
+fn main() {
+   let v = vec!['G','E','E','K','S'];
+   let index: usize = 3;
+   let ch: char = v[index];
+  print!("{ }\n",ch);
 }
