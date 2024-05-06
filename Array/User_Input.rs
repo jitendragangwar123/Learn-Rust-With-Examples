@@ -77,3 +77,13 @@ fn main(){
         test=test-1;
     }
 }
+
+
+//Standard I/O in Rust
+use std::env;
+fn main() {
+  let args: Vec<String> = env::args().collect();
+  for argument in args.iter() {
+    println!("{}", argument);
+  }
+}
