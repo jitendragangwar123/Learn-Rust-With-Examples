@@ -131,6 +131,19 @@ fn main(){
     }
 }
 
+fn main() {
+    let greeting:String=String::from("Hello World");
+    println!("{}: ",greeting);
+
+    let c = greeting.chars().nth(1);
+    match c {
+        Some (c)=>{println!("{}",c)}
+        None => {println!("No character exist!")}
+
+    }
+    //println!("{}:",c.unwrap());
+}
+
 //Slices: A contiguous sequence of elements of the same type.
 fn main(){
     let numbers: [i32; 3] = [1, 2, 3];
