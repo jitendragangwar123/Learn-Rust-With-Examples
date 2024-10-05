@@ -1,3 +1,4 @@
+// First Method:-
 impl Solution {
     pub fn length_of_last_word(s: String) -> i32 {
         let s = s.trim_end();
@@ -11,5 +12,13 @@ impl Solution {
             }
         }
         ans
+    }
+}
+
+
+// Second Method:-
+impl Solution {
+    pub fn length_of_last_word(s: String) -> i32 {
+        return s.split_whitespace().last().unwrap().len() as i32
     }
 }
