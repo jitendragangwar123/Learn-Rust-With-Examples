@@ -13,6 +13,7 @@ This repository comprises concepts and examples related to the Rust programming 
 - [Primitives]()
 - [Custom Types]()
 - [RiseIn-Rust-Bootcamp](https://github.com/jitendragangwar123/Learn-Rust-With-Examples/tree/main/RiseIn-Rust-Bootcamp)
+- [Leetcode-Practice-Problems](https://github.com/jitendragangwar123/Learn-Rust-With-Examples/tree/main/Leetcode-Practice-Problems)
 
 
 
