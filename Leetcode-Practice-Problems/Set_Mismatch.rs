@@ -1,3 +1,4 @@
+// First Approach:
 impl Solution {
     pub fn find_error_nums(nums: Vec<i32>) -> Vec<i32> {
        let mut nums = nums;
@@ -15,5 +16,27 @@ impl Solution {
             }
         }
         return vec![];
+    }
+}
+
+// Second Approach:
+use std::collections::HashMap;
+impl Solution {
+    pub fn find_error_nums(nums: Vec<i32>) -> Vec<i32> {
+        let mut res = vec![0, 0]; 
+        let mut count = HashMap::new();
+
+        for &num in &nums {
+            *count.entry(num).or_insert(0) += 1;
+        }
+
+        for i in 1..=nums.len() as i32 {
+            match count.get(&i) {
+                Some(&2) => res[0] = i,  
+                None => res[1] = i,      
+                _ => {}
+            }
+        }
+        res
     }
 }
