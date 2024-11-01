@@ -1,6 +1,6 @@
 use std::convert::TryInto;
-
 const MAX_SIZE: usize = 10_usize.pow(6) + 1;
+
 struct MyHashMap {
     store: Box<[Option<i32>; MAX_SIZE]>,
 }
