@@ -1,4 +1,4 @@
-// to find the factorial of the number
+// First Method
 fn fact(n: i32) -> i32 {
     if n == 0 {
         1 
@@ -13,7 +13,7 @@ fn main() {
     println!("{:?}", fact(6));
 }
 
-// other approach
+// Second Method
 fn fact(n: i32) -> i32 {
     if n < 0 {
         -1 
