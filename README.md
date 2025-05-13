@@ -15,38 +15,28 @@ This repository comprises concepts and examples related to the Rust programming 
 - [RiseIn-Rust-Bootcamp](https://github.com/jitendragangwar123/Learn-Rust-With-Examples/tree/main/RiseIn-Rust-Bootcamp)
 - [Leetcode-Practice-Problems](https://github.com/jitendragangwar123/Learn-Rust-With-Examples/tree/main/Leetcode-Practice-Problems)
 
-
-
   
 ### For MacOS:
 ```shell
-// Installation
-$ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+$ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh   // Installation
   Rust is installed now. Great!
 $ rustc –-version // check the version
 $ rustup update  // updating 
 $ rustup self uninstall // uninstalling
-
-// Create New Project
-$ mkdir ~/RustWithExamples
-$ cd ~/RustWithExamples
-$ touch hello_world.rs // create rust file
-$ rustc hello_world.rs // to compile the file
-$ ./hello_world // to run the file
-  Hello, world!  // output
 ```
 
 ### For Linux:
 ```shell
-// Installation
-$ sudo apt-get install rustc cargo
+$ sudo apt-get install rustc cargo // Installation
 $ cargo --version // to check the cargo version
 $ cargo new my_project or cargo init // Create New Project
 $ cargo build //to build the project means compiles the project, and generates an executable file in the target/debug directory
 $ cargo build --release // to create a production ready executable
 $ cargo run or ./target/debug/hello_world.exe // to run the executable file
 $ cargo check // to check the syntax and type-checking
+```
 
+```shell
 Cargo.toml: Store metadata about your project
     [package]
     name = "my_project"
@@ -54,4 +44,13 @@ Cargo.toml: Store metadata about your project
     authors = ["Your Name <your@email.com>"]
     [dependencies]
     rand = "0.8.4"
+```
+
+```shell
+$ mkdir ~/RustWithExamples
+$ cd ~/RustWithExamples
+$ touch hello_world.rs // to create new file
+$ rustc hello_world.rs // to compile the file
+$ ./hello_world // to run the file
+  Hello, world!  // output
 ```
