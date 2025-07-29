@@ -16,3 +16,10 @@ fn main() {
         None => println!("Character '{}' not found in '{}'", char1, string1),
     }
 }
+
+/*
+enum Option<T> {
+    Some(T),
+    None,
+}
+*/
