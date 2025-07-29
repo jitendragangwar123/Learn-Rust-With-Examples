@@ -21,3 +21,10 @@ fn main() {
         Err(error) => println!("Error: {}", error),
     }
 }
+
+/*
+enum Result<T, E> {
+    Ok(T),
+    Err(E),
+}
+*/
